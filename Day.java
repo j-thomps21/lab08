@@ -22,10 +22,23 @@ public class Day extends Events
     return "every " + amount + " days start " + super.toString();
   }
 
+  /**
+  */
+  public int getAmount()
+  {
+    return amount;
+  }
 
   /**
   */
-  public boolean eventHappen()
+  public int getTotal()
+  {
+    return total;
+  }
+
+  /**
+  */
+  public boolean ifEventHappen()
   {
     boolean check = false;
     if(total % amount == 0)
@@ -35,6 +48,12 @@ public class Day extends Events
 
   /**
   */
-  public 
-
+  public doEvent()
+  {
+    if(ifEventHappen())
+    {
+      this.getItem();
+      total++;
+    }
+  }
 }
