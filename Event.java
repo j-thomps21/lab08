@@ -40,9 +40,9 @@ public abstract class Event
 
   /**
   */
-  public boolean ifEventHappen();
+  public abstract boolean ifEventHappen();
 
   /**
   */
-  public void doEvent();
+  public abstract void doEvent();
 }

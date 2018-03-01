@@ -16,7 +16,7 @@ public class ProbabilityDay extends Day
 
   /**
   */
-  public toString()
+  public String toString()
   {
     return "prob: " + probability + " " + super.toString();
   }
@@ -36,9 +36,9 @@ public class ProbabilityDay extends Day
   {
     int t = super.getTotal();
     int a = super.getAmount();
-    if()
-    {
+    //if()
+    //{
 
-    }
+    //}
   }
 }
