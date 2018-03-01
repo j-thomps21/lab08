@@ -21,7 +21,7 @@ public abstract class Event
   */
   public String toString()
   {
-    return date + " " + type + " " + item;
+    return date + ": " + item;
   }
 
   /**
@@ -38,11 +38,4 @@ public abstract class Event
     return date;
   }
 
-  /**
-  */
-  public boolean ifEventHappen();
-
-  /**
-  */
-  public void doEvent();
 }

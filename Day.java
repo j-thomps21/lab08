@@ -19,7 +19,7 @@ public class Day extends Events
   */
   public String toString()
   {
-    return "every " + amount + " days start " + super.toString();
+    return super.toString();
   }
 
   /**
@@ -40,20 +40,16 @@ public class Day extends Events
   */
   public boolean ifEventHappen()
   {
-    boolean check = false;
-    if(total % amount == 0)
-      check = true;
-    return check;
+    total++;
+    return total % amount == 0
   }
 
   /**
   */
-  public doEvent()
+  public void doEvent()
   {
-    if(ifEventHappen())
-    {
-      this.getItem();
-      total++;
-    }
+    System.out.println(toString());
+    super.getDate().incDay(amount);
   }
+  
 }
