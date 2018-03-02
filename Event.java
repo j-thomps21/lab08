@@ -38,4 +38,14 @@ public abstract class Event
     return date;
   }
 
+<<<<<<< HEAD
+=======
+  /**
+  */
+  public abstract boolean ifEventHappen();
+
+  /**
+  */
+  public abstract void doEvent();
+>>>>>>> c02fd9fdc943c15a2101bceba89682f99d932c48
 }

@@ -11,7 +11,7 @@ public class Month extends Event
   */
   public Month(MyDate d, String i, String t, int a)
   {
-    super(d, i, t)
+    super(d, i, t);
     amount = a;
   }
 
