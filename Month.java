@@ -16,6 +16,7 @@ public class Month extends Event
   }
 
   /**
+  toString method for this class
   */
   public String toString()
   {
@@ -42,13 +43,13 @@ public class Month extends Event
   }
 
   public boolean ifEventHappen() {
-    
-    
+
+
   }
 
   public void doEvent() {
    System.out.println(toString());
    getDate.incMonth(amount);
-   }   
+   }
 
 }

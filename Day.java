@@ -3,6 +3,8 @@
 public class Day extends Events
 {
   /**
+  amount variable is for "every command" ex: "every 2 days" amount = 2
+  
   */
   private int amount;
   private int total = 0;
@@ -51,5 +53,5 @@ public class Day extends Events
     System.out.println(toString());
     super.getDate().incDay(amount);
   }
-  
+
 }
