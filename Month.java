@@ -61,7 +61,7 @@ public class Month extends Event
   */
   public void doEvent() {
    System.out.println(toString());
-   getDate.incMonth(amount);
+   getDate().incMonth(amount);
    }
 
 }
