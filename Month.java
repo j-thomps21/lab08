@@ -13,12 +13,11 @@ public class Month extends Event
   /**
   Constructor for the Month class
   */
-  public Month(MyDate d, String i, String t, int a)
+  public Month(MyDate d, String i, int a)
   {
-    super(d, i, t);
+    super(d, i);
     amount = a;
     nextDate = d;
-    nextDate.incMonth(amount);
   }
 
   /**

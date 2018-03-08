@@ -11,12 +11,11 @@ public class Day extends Event
 
   /**
   */
-  public Day(MyDate d, String i, String t, int a)
+  public Day(MyDate d, String i, int a)
   {
-    super(d, i, t);
+    super(d, i);
     amount = a;
     nextDate = d;
-    nextDate.incDay(amount);
   }
 
   /**

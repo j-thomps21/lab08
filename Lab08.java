@@ -28,19 +28,43 @@ public class Lab08
       System.exit(1);
     }
 
-
-    Event a = null;
-    MyDate eventStart = null;
-    int i, d, m, y;
-    String line, item;
-    String[] ind;
     ArrayList<Event> all = new ArrayList<Event>();
-    while(sc.hasNextLine())
+    ParseFile.FileIO(sc, all, rand);
+
+    MyDate currDay = MyDate.makeDate(2017,1,1);
+    int simDays = Integer.parseInt(args[1]);
+
+    for(int i = 0; i < simDays; i++)
     {
-      line = sc.nextLine();
-      ind = line.split(" ");
-
-
+      boolean check = false, prev = false;
+      for(int j = 0; j < all.size(); j++)
+      {
+        if(check == false && all.get(j).ifEventHappen(currDay))
+        {
+          check = true;
+          System.out.print(currDay.toString() + ":");
+        }
+        if(check == true)
+        {
+          if(all.get(j).ifEventHappen(currDay))
+          {
+            if(prev)
+            {
+              System.out.print(", ");
+              all.get(j).doEvent();
+            }
+            else
+            {
+              System.out.print(" ");
+              all.get(j).doEvent();
+            }
+            prev = true;
+          }
+        }
+      }
+      if(check == true)
+        System.out.println();
+      currDay.incDay(1);
     }
   }
 }

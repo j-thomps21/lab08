@@ -11,16 +11,14 @@ public abstract class Event
   */
   private MyDate startDate;
   private String item;
-  private String type;
 
   /**
   Constructor for Event
   */
-  public Event(MyDate d, String i, String t)
+  public Event(MyDate d, String i)
   {
     startDate = d;
     item = i;
-    type = t;
   }
 
   /**
@@ -28,7 +26,7 @@ public abstract class Event
   */
   public String toString()
   {
-    return item + " ";
+    return item;
   }
 
   /**

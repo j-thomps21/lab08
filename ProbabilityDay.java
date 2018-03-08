@@ -13,9 +13,9 @@ public class ProbabilityDay extends Day
 
   /**
   */
-  public ProbabilityDay(MyDate d, String i, String t, int a, double p, Random r)
+  public ProbabilityDay(MyDate d, String i, int a, double p, Random r)
   {
-    super(d, i, t, a);
+    super(d, i, a);
     probability = p;
     rand = r;
   }
@@ -34,7 +34,7 @@ public class ProbabilityDay extends Day
     boolean check = super.ifEventHappen(d);
     if(check == true)
     {
-      if(rand.nextDouble(probability) == 0.0)
+      if(rand.nextDouble() == 0.0)
         check = true;
       else
         check = false;

@@ -11,8 +11,8 @@ public class EndMonth extends Month
   /**
   Constructor for the EndMonth class. Only extra variabl is for the monthsToDo
   */
-  public EndMonth(MyDate d, String i, String t, int a, int b) {
-    super(d,i,t,a);
+  public EndMonth(MyDate d, String i, int a, int b) {
+    super(d,i,a);
     monthsToDo = b;
   }
 
