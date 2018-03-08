@@ -1,6 +1,6 @@
 /**
 */
-public class Day extends Events
+public class Day extends Event
 {
   /**
   amount variable is for "every command" ex: "every 2 days" amount = 2
@@ -43,7 +43,7 @@ public class Day extends Events
   public boolean ifEventHappen()
   {
     total++;
-    return total % amount == 0
+    return total % amount == 0;
   }
 
   /**

@@ -38,18 +38,19 @@ public class Month extends Event
 
   /**
     */
-  public int totalInc() {
+  public void totalInc() {
     total++;
   }
 
   public boolean ifEventHappen() {
-
+    total++;
+    return total % amount == 0;
 
   }
 
   public void doEvent() {
    System.out.println(toString());
-   getDate.incMonth(amount);
+   getDate().incMonth(amount);
    }
 
 }
