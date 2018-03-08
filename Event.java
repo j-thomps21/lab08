@@ -5,11 +5,11 @@ different day and month type events that occur.
 public abstract class Event
 {
   /**
-  MyDate field for when the event begins.
+  startDate represents the date where the event begins
   String item field for the name of the event
   type for whether the amount of money is an expense or income.
   */
-  private MyDate date;
+  private MyDate startDate;
   private String item;
   private String type;
 
@@ -18,7 +18,7 @@ public abstract class Event
   */
   public Event(MyDate d, String i, String t)
   {
-    date = d;
+    startDate = d;
     item = i;
     type = t;
   }
@@ -28,7 +28,7 @@ public abstract class Event
   */
   public String toString()
   {
-    return item;
+    return item + " ";
   }
 
   /**
@@ -44,14 +44,14 @@ public abstract class Event
   */
   public MyDate getDate()
   {
-    return date;
+    return startDate;
   }
 
   /**
   abstract method that will be used later down in the lower classes.
   Will check to see if the event will happen
   */
-  public abstract boolean ifEventHappen();
+  public abstract boolean ifEventHappen(MyDate a);
 
   /**
   If the above method returns true, then do this method to carry out the event

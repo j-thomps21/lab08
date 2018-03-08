@@ -40,7 +40,7 @@ public class Day extends Event
 
   /**
   */
-  public boolean ifEventHappen()
+  public boolean ifEventHappen(MyDate a)
   {
     total++;
     return total % amount == 0 && total != 1;
@@ -50,7 +50,7 @@ public class Day extends Event
   */
   public void doEvent()
   {
-    if(ifEventHappen()){
+    if(ifEventHappen(this.getDate())){
       System.out.println(toString());
       super.getDate().incDay(amount);
     }

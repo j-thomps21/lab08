@@ -44,9 +44,11 @@ public class Lab08
           a = new ProbabilityDay(newStart, item, ind[7], c, b, rand);
         }
         else{
-            for(i = 6; i < ind.length; i++)
-          item += ind[i];
+          newStart = splitDay(ind[4]);
+          for(i = 6; i < ind.length; i++)
+            item += ind[i];
           int c = Integer.parseInt(ind[1]);
+          System.out.println(c + " ");
           a = new Day(newStart, item, ind[5], c);
         }
       }
@@ -64,13 +66,12 @@ public class Lab08
     startDay = MyDate.makeDate(2017,1,1);   
     
     int simDays = Integer.parseInt(args[1]);
-    Event[] all2 = all.toArray(new Event[all.size()]);
     for(i = 0; i < simDays; i++){
       System.out.print(startDay +": ");
-      for(int j = 0; i < all2.length; j++){
-        all2[i].doEvent();
-        System.out.println();
+      for(int j = 0; j < all.size(); j++){
+        all.get(j).doEvent();
       }
+      System.out.println();
       
 
       startDay.incDay(1);

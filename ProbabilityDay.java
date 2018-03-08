@@ -30,7 +30,7 @@ public class ProbabilityDay extends Day
   */
   public void doEvent()
   {
-    if(super.ifEventHappen()) {
+    if(super.ifEventHappen(this.getDate())) {
        int i = rand.nextInt((int)(1/probability));
        if(i == 1) {
          super.doEvent();

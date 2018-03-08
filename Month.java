@@ -1,4 +1,5 @@
 /**
+class Month that extends Event. similar to Day class execpt events happen on a monthly basis
 */
 public class Month extends Event
 {
@@ -7,7 +8,7 @@ public class Month extends Event
   total variable shows how many monaths have passed
   */
   private int amount;
-  private int total = 0;
+  private MyDate nextDate;
 
   /**
   Constructor for the Month class
@@ -16,6 +17,8 @@ public class Month extends Event
   {
     super(d, i, t);
     amount = a;
+    nextDate = d;
+    nextDate.incMonth(amount);
   }
 
   /**
@@ -35,33 +38,19 @@ public class Month extends Event
   }
 
   /**
-  Returns the total months that have passed
-  */
-  public int getTotal() {
-    return total;
-  }
-
-  /**
-  Incriments the total field
-  */
-  public int totalInc() {
-    total++;
-  }
-
-  /**
   Determines if the event should happen
   */
-  public boolean ifEventHappen() {
-
-
+  public boolean ifEventHappen(MyDate d) {
+    return d.daysUntil(this.nextDate) == 0;
   }
 
   /**
-  ifEventHappen is true, then do the event (ie print out the string and incriment)
+  ifEventHappen is true, then do the event (ie print out the string and set the next event date)
   */
   public void doEvent() {
    System.out.println(toString());
    getDate().incMonth(amount);
+    System.out.println(toString());
+    nextDate.incMonth(amount);
    }
-
 }
