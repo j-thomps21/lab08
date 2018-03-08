@@ -51,7 +51,7 @@ public abstract class Event
   abstract method that will be used later down in the lower classes.
   Will check to see if the event will happen
   */
-  public abstract boolean ifEventHappen(MyDate a);
+  public abstract boolean ifEventHappen(MyDate d);
 
   /**
   If the above method returns true, then do this method to carry out the event

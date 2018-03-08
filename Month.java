@@ -48,9 +48,7 @@ public class Month extends Event
   ifEventHappen is true, then do the event (ie print out the string and set the next event date)
   */
   public void doEvent() {
-   System.out.println(toString());
-   getDate().incMonth(amount);
-    System.out.println(toString());
+    System.out.print(toString());
     nextDate.incMonth(amount);
    }
 }

@@ -4,10 +4,10 @@ public class Day extends Event
 {
   /**
   amount variable is for "every command" ex: "every 2 days" amount = 2
-  
+
   */
   private int amount;
-  private int total = 0;
+  private MyDate nextDate;
 
   /**
   */
@@ -15,6 +15,8 @@ public class Day extends Event
   {
     super(d, i, t);
     amount = a;
+    nextDate = d;
+    nextDate.incDay(amount);
   }
 
   /**
@@ -33,27 +35,17 @@ public class Day extends Event
 
   /**
   */
-  public int getTotal()
+  public boolean ifEventHappen(MyDate d)
   {
-    return total;
-  }
-
-  /**
-  */
-  public boolean ifEventHappen(MyDate a)
-  {
-    total++;
-    return total % amount == 0 && total != 1;
+    return d.daysUntil(this.nextDate) == 0;
   }
 
   /**
   */
   public void doEvent()
   {
-    if(ifEventHappen(this.getDate())){
-      System.out.println(toString());
-      super.getDate().incDay(amount);
-    }
+    System.out.print(toString());
+    nextDate.incDay(amount);
   }
 
 }

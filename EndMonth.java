@@ -18,14 +18,14 @@ public class EndMonth extends Month
 
   /**
   ifEventHappen method for the EndMonth class. Uses the same ifEventHappen method in the upper level class but
-  subtracts a month if that value returns true
+  checks if there are months left to make payments on (or get income)
   */
   public boolean ifEventHappen(MyDate d) {
     boolean check = false;
     if(super.ifEventHappen(d))
     {
-      check = true;
-      monthsToDo--;
+      if(monthsToDo != 0)
+        check = true;
     }
     return check;
   }

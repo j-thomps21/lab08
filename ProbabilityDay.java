@@ -1,9 +1,10 @@
 import java.lang.*;
 import java.util.*;
+
 /**
 */
 public class ProbabilityDay extends Day
-{  
+{
 
   /**
   */
@@ -28,20 +29,16 @@ public class ProbabilityDay extends Day
 
   /**
   */
-  public void doEvent()
+  public boolean ifEventHappen(MyDate d)
   {
-    if(super.ifEventHappen(this.getDate())) {
-       int i = rand.nextInt((int)(1/probability));
-       if(i == 1) {
-         super.doEvent();
-       }
+    boolean check = super.ifEventHappen(d);
+    if(check == true)
+    {
+      if(rand.nextDouble(probability) == 0.0)
+        check = true;
+      else
+        check = false;
     }
-    int t = super.getTotal();
-    int a = super.getAmount();
-    //if()
-    //{
-
-    //}
+    return check;
   }
-
 }
