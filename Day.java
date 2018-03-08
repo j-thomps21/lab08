@@ -43,15 +43,17 @@ public class Day extends Event
   public boolean ifEventHappen()
   {
     total++;
-    return total % amount == 0
+    return total % amount == 0 && total != 1;
   }
 
   /**
   */
   public void doEvent()
   {
-    System.out.println(toString());
-    super.getDate().incDay(amount);
+    if(ifEventHappen()){
+      System.out.println(toString());
+      super.getDate().incDay(amount);
+    }
   }
 
 }
