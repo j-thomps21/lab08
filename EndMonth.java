@@ -17,6 +17,21 @@ public class EndMonth extends Month
   }
 
   /**
+  ifEventHappen method for the EndMonth class. Uses the same ifEventHappen method in the upper level class but
+  subtracts a month if that value returns true
+  */
+  public boolean ifEventHappen(MyDate d) {
+    boolean check = false;
+    if(super.ifEventHappen(d))
+    {
+      check = true;
+      monthsToDo--;
+    }
+    return check;
+  }
+
+
+  /**
   Method that check when all of the monthly payments have been paid. When
   the monthsToDo variable has reached 0, then you know that all of the months
   have been paid.
@@ -25,13 +40,6 @@ public class EndMonth extends Month
     return monthsToDo == 0;
   }
 
-  /**
-  Signifies that one month has been paid off
-  */
-  public void incMonth()
-  {
-    monthsToDo--;
-  }
 
   /**
   toString method for this class.
