@@ -1,6 +1,6 @@
 /**
 */
-public class Day extends Events
+public class Day extends Event
 {
   /**
   amount variable is for "every command" ex: "every 2 days" amount = 2
