@@ -7,7 +7,7 @@ public class Month extends Event
   total variable shows how many monaths have passed
   */
   private int amount;
-  private int total = 0;
+  private MyDate nextDate;
 
   /**
   Constructor for the Month class
@@ -16,6 +16,7 @@ public class Month extends Event
   {
     super(d, i, t);
     amount = a;
+    nextDate = d.incMonth(amount);
   }
 
   /**
@@ -51,9 +52,8 @@ public class Month extends Event
   /**
   Determines if the event should happen
   */
-  public boolean ifEventHappen() {
-
-
+  public boolean ifEventHappen(MyDate d) {
+    return d.daysUntil(this.nextDate) == 0;
   }
 
   /**
@@ -63,5 +63,4 @@ public class Month extends Event
    System.out.println(toString());
    getDate.incMonth(amount);
    }
-
 }
