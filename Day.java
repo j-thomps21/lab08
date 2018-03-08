@@ -1,6 +1,6 @@
 /**
 */
-public class Day extends Events
+public class Day extends Event
 {
   /**
   */
@@ -19,7 +19,7 @@ public class Day extends Events
   */
   public String toString()
   {
-    return "every " + amount + " days start " + super.toString();
+    return super.toString();
   }
 
   /**
@@ -48,7 +48,7 @@ public class Day extends Events
 
   /**
   */
-  public doEvent()
+  public void doEvent()
   {
     if(ifEventHappen())
     {
