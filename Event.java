@@ -5,7 +5,7 @@ different day and month type events that occur.
 public abstract class Event
 {
   /**
-  MyDate field for when the event begins.
+  startDate represents the date where the event begins
   String item field for the name of the event
   type for whether the amount of money is an expense or income.
   */
