@@ -28,7 +28,7 @@ public abstract class Event
   */
   public String toString()
   {
-    return date + ": " + item;
+    return item;
   }
 
   /**
