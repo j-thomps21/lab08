@@ -16,23 +16,40 @@ public class Month extends Event
   }
 
   /**
+  toString method for this class
   */
   public String toString()
   {
-    return "every " + amount + "months start " + super.toString();
+    return super.toString();
   }
 
   /**
   */
   public int getAmount()
   {
-    
+    return amount;
   }
 
   /**
   */
+  public int getTotal() {
+    return total;
+  }
 
   /**
-  */
+    */
+  public int totalInc() {
+    total++;
+  }
+
+  public boolean ifEventHappen() {
+
+
+  }
+
+  public void doEvent() {
+   System.out.println(toString());
+   getDate.incMonth(amount);
+   }
 
 }

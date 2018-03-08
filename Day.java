@@ -3,6 +3,8 @@
 public class Day extends Event
 {
   /**
+  amount variable is for "every command" ex: "every 2 days" amount = 2
+  
   */
   private int amount;
   private int total = 0;
@@ -40,20 +42,16 @@ public class Day extends Event
   */
   public boolean ifEventHappen()
   {
-    boolean check = false;
-    if(total % amount == 0)
-      check = true;
-    return check;
+    total++;
+    return total % amount == 0
   }
 
   /**
   */
   public void doEvent()
   {
-    if(ifEventHappen())
-    {
-      this.getItem();
-      total++;
-    }
+    System.out.println(toString());
+    super.getDate().incDay(amount);
   }
+
 }
