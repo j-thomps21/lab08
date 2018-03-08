@@ -1,9 +1,20 @@
 import java.util.*;
 import java.io.*;
 import java.lang.*;
-
+/**
+An extra class that helps the Lab08 class parse the input from the txt file.
+This helps split the workload.
+@author Thompson, Joshua - 206360
+*/
 public class ParseFile
 {
+  /**
+  Method that takes the fileScanner and ArrayList and alters them. Reads in from the
+  Scanner, parsing it and correctly inputting it into the ArrayList.
+  @param Scanner Scanner to the fileScanner
+  @param ArrayList<Event> an ArrayList of type Event which utilizes polymorphism
+  @param Random A random object that is passed to the probabilityDay objects
+  */
   public static void FileIO(Scanner sc, ArrayList<Event> all, Random rand)
   {
     Event a = null;
@@ -55,6 +66,11 @@ public class ParseFile
   }
 
 
+  /**
+  Takes an input string of "mm/dd/yyyy" and turns it into a MyDate object
+  @param String The string that will be parsed to a MyDate
+  @return MyDate returns the Mydate that the String represents
+  */
   public static MyDate parseDate(String date)
   {
     String[] a = new String[3];
@@ -66,6 +82,12 @@ public class ParseFile
   }
 
 
+  /**
+  Takes an array and a string and tells where in the array that string is
+  @param string the String we are searching for
+  @param String[] the String array that we are searching through
+  @return the index of where the string is
+  */
   public static int indexOf(String a, String[] s)
   {
     int index = 0;
@@ -81,6 +103,12 @@ public class ParseFile
   }
 
 
+  /**
+  Method that searches for the item name. Basically just looks for the keywords "expense" or "income"
+  and saves all the strings that come after those keywords
+  @param String[] String array that we are searching through
+  @return A string that can be saved as the item name for the Event
+  */
   public static String searchItem(String[] s)
   {
     boolean check = false;

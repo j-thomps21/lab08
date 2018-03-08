@@ -1,15 +1,22 @@
 /**
+Class Day that extends Event. Adds an amount field and nextDate field. Used to describe events that happen on a
+somewhat daily basis
+@author Thompson, Joshua - 206360
 */
 public class Day extends Event
 {
   /**
-  amount variable is for "every command" ex: "every 2 days" amount = 2
-
+  amount is for "every command" ex: "every 2 days" amount = 2
+  nextDate is the next date that the event will take place again
   */
   private int amount;
   private MyDate nextDate;
 
   /**
+  Constructor for the day class
+  @param MyDate Date when the Event will start
+  @param String Item String for the event
+  @param int amount of days between each event
   */
   public Day(MyDate d, String i, int a)
   {
@@ -19,20 +26,19 @@ public class Day extends Event
   }
 
   /**
+  toString method for Day class
+  @return string
   */
   public String toString()
   {
     return super.toString();
   }
 
-  /**
-  */
-  public int getAmount()
-  {
-    return amount;
-  }
 
   /**
+  Tells whether based on the give date if the event will happen or not
+  @param MyDate An input date which will compare with the nextDate
+  @return A boolean
   */
   public boolean ifEventHappen(MyDate d)
   {
@@ -40,6 +46,7 @@ public class Day extends Event
   }
 
   /**
+  does the event by printing a string and incrementing the nextDate
   */
   public void doEvent()
   {

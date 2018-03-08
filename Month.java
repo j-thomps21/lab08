@@ -1,5 +1,6 @@
 /**
 class Month that extends Event. similar to Day class execpt events happen on a monthly basis
+@author Thompson, Joshua - 206360
 */
 public class Month extends Event
 {
@@ -12,6 +13,9 @@ public class Month extends Event
 
   /**
   Constructor for the Month class
+  @param MyDate Date when the event starts
+  @param String item name for the event
+  @param Int the amount of months to skip between each event
   */
   public Month(MyDate d, String i, int a)
   {
@@ -22,6 +26,7 @@ public class Month extends Event
 
   /**
   toString method for this class
+  @return the super class' toString method
   */
   public String toString()
   {
@@ -29,7 +34,7 @@ public class Month extends Event
   }
 
   /**
-  Returns the amount of the object.
+  @return the amount of the object.
   */
   public int getAmount()
   {
@@ -38,6 +43,8 @@ public class Month extends Event
 
   /**
   Determines if the event should happen
+  @param MyDate Takes a date and checks whether the event should happen on that Date
+  @return A boolean of true or false
   */
   public boolean ifEventHappen(MyDate d) {
     return d.daysUntil(this.nextDate) == 0;

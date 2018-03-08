@@ -3,9 +3,16 @@ import java.io.*;
 import java.lang.*;
 
 /**
+Lab08 class where the main is held. Here we print out a sort of list of events that happen
+when they are scheduled to happen
+@author Thompson, Joshua - 206360
+@author Wiltshire, Jared - 206948
 */
 public class Lab08
 {
+  /**
+  the main method
+  */
   public static void main(String[] args)
   {
     if(args.length < 2)
